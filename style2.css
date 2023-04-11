@@ -1,0 +1,188 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-color: #111111;
+    height: 98vh;
+    width: fit-content;
+}
+
+nav {
+    background-color: #2C2C2C;
+    height: 10%;
+    width: 100%;
+    border-top: 0.5px solid white;
+    border-bottom: 2.5px solid white;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+}
+
+nav h1 {
+    color: white;
+    font-size: 2em;
+    font-weight: 400;
+    padding-left: 2.5%;
+}
+
+.gridContainer {
+    height: 80%;
+    display: grid;
+    padding: 25px;
+    gap: 20px;
+    grid-template-columns: repeat(5, 425px);
+}
+
+.gridContainer .gridItem .image { 
+    color: white;
+    display: flex;
+    align-items: flex-end;
+}
+
+.gridItem .textBG {
+    width: 100%;
+    height: 125px;
+    background-color: rgba(25, 25, 25, 0.6);
+}
+
+.gridItem .tabletText {
+    display: none;
+}
+
+.gridItem .textBG h2 {
+    font-weight: 500;
+    font-size: 2em;
+    padding: 20px 0 0 20px;
+}
+
+.gridItem .textBG p {
+    font-size: 0.85em;
+    padding: 5px 20px 0 20px;
+}
+
+.image {
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+/* Webpage Size */
+.one { grid-column: 1 / 3; grid-row: 1 / 3; }
+
+.two { grid-column: 3 / 4; grid-row: 1 / 2; }
+
+.three { grid-column: 4 / 5; grid-row: 1 / 2; }
+
+.four { grid-column: 5 / 6; grid-row: 1 / 2; }
+
+.five { grid-column: 3 / 4; grid-row: 2 / 3; }
+
+.six { grid-column: 4 / 5; grid-row: 2 / 3; }
+
+.seven { grid-column: 5 / 6; grid-row: 2 / 3; }
+
+/* Item Images */
+.one .image { background-image: url(./Images/the-arcade.jpg); }
+
+.two .image { background-image: url(./Images/equal-minds.jpg); }
+
+.three .image { background-image: url(./Images/prepared.jpg); }
+
+.four .image { background-color:#333232; }
+
+.five .image { background-image: url(./Images/the-larper.jpg); }
+
+.six .image { background-image: url(./Images/traffic.jpg); }
+
+.seven .image { background-image: url(./Images/rudolph.jpg); }
+
+
+
+/* IPad / Tablet Size */
+@media screen and ( 450px < width < 900px ) {
+    .gridContainer {
+        grid-template-columns: repeat(1, 95vw);
+        grid-template-rows: repeat(8, 50%);
+        height: fit-content;
+    }
+
+    .gridContainer .gridItem {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .gridItem .image {
+        width: 60%;
+        background-position-x: 40%;
+    }
+    
+    .gridItem .textBG {
+        display: none;
+    }
+
+    .gridItem .tabletText {
+        display: inline;
+        width: 35%;
+        text-align: left;
+        padding: 15px;
+    }
+
+    .gridItem .tabletText h2 {
+        color: white;
+        font-size: 3em;
+        font-weight: 500;
+    }
+
+    .gridItem .tabletText p {
+        color: white;
+        font-size: 1.5em;
+        font-weight: 300;
+    }
+
+
+    .one { grid-column: 1 / 2; grid-row: 1 / 2; }
+    
+    .two { grid-column: 1 / 2; grid-row: 2 / 3; }
+    
+    .three { grid-column: 1 / 2; grid-row: 3 / 4; }
+    
+    .four { grid-column: 1 / 2; grid-row: 4 / 5; }
+    
+    .five { grid-column: 1 / 2; grid-row: 5 / 6; }
+    
+    .six { grid-column: 1 / 2; grid-row: 6 / 7; }
+    
+    .seven { grid-column: 1 / 2; grid-row: 7 / 8; }
+}
+
+
+/* Mobile / Phone Size */
+@media screen and ( width < 450px ) {
+    .gridContainer {
+        grid-template-columns: repeat(1, 100%);
+        grid-template-rows: repeat(8, 700px);
+    }
+
+    .gridItem .image {
+        background-position: center;
+    }
+    
+    .one { grid-column: 1 / 2; grid-row: 1 / 2; }
+    
+    .two { grid-column: 1 / 2; grid-row: 2 / 3; }
+    
+    .three { grid-column: 1 / 2; grid-row: 3 / 4; }
+    
+    .four { grid-column: 1 / 2; grid-row: 4 / 5; }
+    
+    .five { grid-column: 1 / 2; grid-row: 5 / 6; }
+    
+    .six { grid-column: 1 / 2; grid-row: 6 / 7; }
+    
+    .seven { grid-column: 1 / 2; grid-row: 7 / 8; }
+}
